@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 7,
+      "title": "hello",
+      "author": "hamza",
+      "category": "big Data",
+      "date": "1996"
+    },
+    {
+      "id": 8,
+      "title": "hamza",
+      "author": "hamza",
+      "category": "it",
+      "date": "1996"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

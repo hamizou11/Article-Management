@@ -1,0 +1,4 @@
+@import "tailwindcss/base";
+@import "~quill/dist/quill.bubble.css"; 
+@import "tailwindcss/components";
+@import "tailwindcss/utilities" ;
