@@ -1,18 +1,18 @@
 {
   "posts": [
     {
-      "id": 7,
-      "title": "hello",
-      "author": "hamza",
-      "category": "big Data",
-      "date": "1996"
+      "id": 4,
+      "title": "hamza",
+      "author": "marouani",
+      "category": "big data",
+      "date": "2022"
     },
     {
-      "id": 8,
-      "title": "hamza",
-      "author": "hamza",
-      "category": "it",
-      "date": "1996"
+      "id": 5,
+      "title": "sssss",
+      "author": "ss",
+      "category": "ss",
+      "date": "sssss"
     }
   ],
   "comments": [],

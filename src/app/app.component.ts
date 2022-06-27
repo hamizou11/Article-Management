@@ -1,9 +1,8 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component ,OnInit,EventEmitter} from '@angular/core';
 import { FormGroup ,FormBuilder, FormControl} from '@angular/forms';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { ArticleModel } from './article.module';
 import { ApiService } from './shared/api.service';
-
 
 @Component({
   selector: 'app-root',
@@ -15,7 +14,11 @@ export class AppComponent implements OnInit {
   articledata !: any;
   article: ArticleModel = new ArticleModel ();
   formValue !: FormGroup;
-  constructor( private formBuilder : FormBuilder,private api :ApiService ) {}
+  LoadedFeature = 'add';
+ 
+
+  
+  constructor( private formBuilder : FormBuilder,private api :ApiService  ) {}
   
 
   
@@ -34,14 +37,19 @@ export class AppComponent implements OnInit {
     
     })
     this.getAllArtical();
+  
     }
+    onNavigate(feature :string){
+      this.LoadedFeature = feature;
+
+     }
 
     onSubmit (){
       this.article.title = this.formValue.value.title;
       this.article.author = this.formValue.value.author;
       this.article.category = this.formValue.value.category;
       this.article.date = this.formValue.value.date;
-      this.api.post(this.article).subscribe(res=> {console.log(res); alert("Article added")})
+      this.api.post(this.article).subscribe(res=> {console.log(res); alert("Article added")});
       this.getAllArtical();
       
 
@@ -57,14 +65,7 @@ this.api.get().subscribe(res=>{
 })
  
   }
-deleteArtical(row :any){
-this.api.delete(row.id).subscribe(res=>{
-  alert("Article Deleted");
-  this.getAllArtical();
-})
 
- 
-  }
    
     }
  
