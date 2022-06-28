@@ -1,9 +1,11 @@
-<app-header (featureSelected)="onNavigate($event)"fffff></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
 <div class="col-md-12">
   <app-artical-add *ngIf="LoadedFeature ==='add'"></app-artical-add>
   <app-artical-list *ngIf="LoadedFeature !== 'add'"></app-artical-list>
+  
+  
  
 
 </div>
